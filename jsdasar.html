@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Dasar JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h3><center>Contoh Fundamental JavaScript</center></h3>
+    <div class="container">
+        <div class="example">
+            <a href="#" onclick="showExample('alert_example')">Alert</a>
+            <a href="#" onclick="showExample('statemen1_example')">Statement 1 Baris</a>
+            <a href="#" onclick="showExample('statemen2_example')">Statement 2 Baris</a>
+            <a href="#" onclick="showExample('variable_example')">Variabel</a>
+            <a href="#" onclick="showExample('mengubahvalue_example')">Mengubah Value Variabel</a>
+            <a href="#" onclick="showExample('menggunakanvariabel_example')">Menggunakan Variabel</a>
+            <a href="#" onclick="showExample('let_example')">Menggunakan Let</a>
+            <a href="#" onclick="showExample('var_example')">Menggunakan var</a>
+            <a href="#" onclick="showExample('letnilai_example')">Menggunakan Let Nilai</a>
+            <a href="#" onclick="showExample('tipedata_example')">Menggunakan Tipe Data</a>
+            <a href="#" onclick="showExample('tipedatanumber_example')">Menggunakan Tipe Data Number</a>
+            <a href="#" onclick="showExample('tipedatabigint_example')">Menggunakan Tipe Data Bigint</a>
+            <a href="#" onclick="showExample('tipedatastring_example')">Menggunakan Tipe Data String</a>
+            <a href="#" onclick="showExample('tipedatabolean_example')">Menggunakan Tipe Data Boolean</a>
+            <a href="#" onclick="showExample('tipedataundefined_example')">Menggunakan Tipe Data Undefined</a>
+            <a href="#" onclick="showExample('tipedatanull_example')">Menggunakan Tipe Data Null</a>
+            <a href="#" onclick="showExample('tipedatasymbol_example')">Menggunakan Tipe Data Symbol</a>
+            <a href="#" onclick="showExample('tipedataobject_example')">Menggunakan Tipe Data Object</a>
+            <a href="#" onclick="showExample('tipeconversionstring_example')">Menggunakan Tipe Conversion String</a>
+            <a href="#" onclick="showExample('tipeconversionnumeric_example')">Menggunakan Tipe Conversion Numeric</a>
+            <a href="#" onclick="showExample('tipeconversionboolean_example')">Menggunakan Tipe Conversion Boolean</a>
+            <a href="#" onclick="showExample('operatoraritmatika')">Menggunakan Operator Aritmatika</a>
+            <a href="#" onclick="showExample('operatorperbandingan')">Menggunakan Operator Perbandingan</a>
+            <a href="#" onclick="showExample('operatorlogika')">Menggunakan Operator Logika</a>
+            <a href="#" onclick="showExample('operatorbitwise')">Menggunakan Operator Bitwise</a>
+            <a href="#" onclick="showExample('operatorarternary')">Menggunakan Operator Ternary</a>
+            <a href="#" onclick="showExample('popupalert')">Menggunakan Pop Up Alert</a>
+            <a href="#" onclick="showExample('percabanganelseif')">Menggunakan Percabangan else if</a>
+            <a href="#" onclick="showExample('percabanganswitch')">Menggunakan Percabangan switch</a>
+            <a href="#" onclick="showExample('percabanganfor')">Menggunakan Percabangan for</a>
+            <a href="#" onclick="showExample('percabanganwhile')">Menggunakan Percabangan while</a>
+            <a href="#" onclick="showExample('percabangandowhile')">Menggunakan Percabangan do while</a>
+            <a href="#" onclick="showExample('loopcontrolbreak')">Menggunakan Loop Control Break</a>
+            <a href="#" onclick="showExample('loopcontrol')">Menggunakan Loop Control</a>
+        </div>
+    </div>
+
+    <!-- Script untuk menampilkan contoh-contoh -->
+    <script>
+        function showExample(id) {
+            hideAllExamples(); // Sembunyikan semua contoh
+            document.getElementById(id).style.display = "block"; // Tampilkan contoh yang dipilih
+        }
+
+        function hideAllExamples() {
+            var examples = document.querySelectorAll('.example-content');
+            examples.forEach(function(example) {
+                example.style.display = "none";
+            });
+        }
+    </script>
+
+    <!-- Contoh-contoh JavaScript -->
+    <div id="alert_example" class="example-content">
+        <script>
+            alert('Hallo World');
+        </script>
+    </div>
+
+    <div id="statemen1_example" class="example-content">
+        <script>
+            console.log('statement 1 baris');
+        </script>
+    </div>
+
+    <div id="statemen2_example" class="example-content">
+        <script>
+            alert('Hallo World');
+            console.log('statement 1 baris');
+        </script>
+    </div>
+
+    <div id="variable_example" class="example-content">
+        <script>
+            var fullName = "Nova";
+            document.write(fullName);
+        </script>
+    </div>
+
+    <div id="mengubahvalue_example" class="example-content">
+        <script>
+            var fullName2 = "Nova";
+            fullName2 = "Siti Nova";
+            fullName2 = "Fatika";
+
+            document.write(fullName2);
+        </script>
+    </div>
+
+    <div id="menggunakanvariabel_example" class="example-content">
+        <script>
+            var fullName3 = "Nova";
+            fullName3 = "Siti Nova";
+            fullName3 = "Fatika";
+
+            document.write(fullName3);
+            document.write('<br>');
+            document.write(fullName3);
+            document.write('<br>');
+            document.write(fullName3);
+            document.write('<br>');
+            document.write(fullName3);
+            document.write('<br>');
+            document.write(fullName3);
+            document.write('<br>');
+            document.write(fullName3);
+            document.write('<br>');
+            document.write(fullName3);
+        </script>
+    </div>
+
+    <div id="let_example" class="example-content">
+        <script>
+            let fullName4 = "Fatika";
+            fullName4 = "Nova";
+
+            document.write(fullName4); // Output: Nova
+        </script>
+    </div>
+
+    <div id="var_example" class="example-content">
+        <script>
+            // Menggunakan var
+            var x = 10;
+            if (true) {
+                var x = 20;
+                console.log("Nilai x di dalam blok:", x)
+            }
+            console.log("Nilai x di luar blok:", x);
+        </script>
+    </div>
+        <!-- Lanjutan kode contoh-contoh JavaScript -->
+
+    <!-- Contoh-contoh penggunaan let, var, dan tipe data -->
+    <div id="letnilai_example" class="example-content">
+        <script>
+            let y = 10;
+            if (true) {
+                let y = 20;
+                console.log("Nilai y di dalam blok:", y)
+            }
+            console.log("Nilai y di luar blok:", y);
+        </script>
+    </div>
+
+    <div id="tipedata_example" class="example-content">
+        <script>
+            let bulat = 25
+            let desimal = 25.2
+
+            document.writeln(bulat)
+            document.writeln('<br>')
+            document.writeln(desimal)
+            document.writeln('<br>')
+            document.writeln('Hasil Penjumlahan = ')
+            document.writeln(desimal + bulat)
+        </script>
+    </div>
+
+    <!-- Contoh-contoh penggunaan tipe data -->
+    <div id="tipedatanumber_example" class="example-content">
+        <script>
+            let bulatt = 25
+            let string = 'a'
+
+            document.writeln(bulatt / 0) // Output infinity
+            document.writeln('<br>')
+            document.writeln(string / 5) // Output NaN (Not a Number)
+        </script>
+    </div>
+
+    <div id="tipedatabigint_example" class="example-content">
+        <script>
+            let bullat = 12312312312312323121312131213121313121312n
+
+            document.writeln(bullat)
+        </script>
+    </div>
+
+    <div id="tipedatastring_example" class="example-content">
+        <script>
+            let text = "arkatama"
+
+            document.writeln(text)
+        </script>
+    </div>
+
+    <div id="tipedatabolean_example" class="example-content">
+        <script>
+            let admin = true
+            let perbandingan = 15 > 9
+            document.writeln(perbandingan)
+        </script>
+    </div>
+
+    <div id="tipedataundefined_example" class="example-content">
+        <script>
+            let adminn
+            document.writeln(adminn)
+        </script>
+    </div>
+
+    <div id="tipedatanull_example" class="example-content">
+        <script>
+            let admmin = null
+            document.writeln(admmin)
+        </script>
+    </div>
+
+    <div id="tipedatasymbol_example" class="example-content">
+        <script>
+            let employee = Symbol('Nova')
+            console.log(employee)
+            console.log(employee.description)
+        </script>
+    </div>
+
+    <div id="tipedataobject_example" class="example-content">
+        <script>
+            let employeee = {
+                name: 'john',
+                age: 30,
+                job: 'web developer',
+                isMarried: false,
+            }
+
+            document.write(`My Name is ${employeee.name} and he is ${employeee.age} years old`)
+        </script>
+    </div>
+    <div id="tipeconversionstring_example" class="example-content">
+        <script>
+            let value = false
+            let stringg = String(value)
+            alert(typeof value)
+        </script>
+    </div>
+
+    <div id="tipeconversionnumeric_example" class="example-content">
+        <script>
+            let str = '123'
+            let nbr = Number('123')
+            alert(typeof nbr)
+        </script>
+    </div>
+
+    <div id="tipeconversionboolean_example" class="example-content">
+        <script>
+            alert(Boolean(0))
+            alert(Boolean(1))
+        </script>
+    </div>
+    <div id="operatoraritmatika" class="example-content">
+        <script>
+            let a = 3;
+            let b = 5;
+            console.log(a + b);
+            console.log(a - b);
+            console.log(a * b);
+            console.log(a ** b);
+            console.log(a / b);
+            console.log(a % b);
+        </script>
+    </div>
+
+    <div id="operatorperbandingan" class="example-content">
+        <script>
+            let c = 3;
+            let d = 5;
+
+            console.log(c == d);
+            console.log(c < d);
+            console.log(c > d);
+            console.log(c != d);
+        </script>
+    </div>
+
+    <div id="operatorlogika" class="example-content">
+        <script>
+            let e = 3;
+            let f = 5;
+            console.log(e && f);
+            console.log(e || f);
+            console.log(!e);
+        </script>
+    </div>
+
+    <div id="operatorbitwise" class="example-content">
+        <script>
+            let g = 3;
+            let h = 5;
+            console.log(g & h);
+            console.log(g | h);
+            console.log(g ^ h);
+            console.log(~g);
+        </script>
+    </div>
+    
+    <div id="operatorarternary" class="example-content">
+        <script>
+            let i = 3;
+            let j = 5;
+            console.log(i == j ? 'sama' : 'tidak sama');
+        </script>
+    </div>
+
+    <!-- Contoh penggunaan pop up alert -->
+    <div id="popupalert" class="example-content">
+        <script>
+            //pop up alert
+            alert('Hallo Selamat datang di Arkatama')
+        </script>
+    </div>
+
+    <!-- Contoh-contoh percabangan dan perulangan -->
+    <div id="percabanganelseif" class="example-content">
+        <script>
+            //percabangan else-if
+            let sttring = prompt('1+1 ?')
+
+            if(sttring == 2){
+                alert('Jawaban anda Betul')
+            }else if(sttring > 2){
+                alert('Jawaban anda Kelebihan')
+            }else if(sttring < 2){
+                alert('Jawaban anda Kurang')
+            }else{
+                alert('Jawaban anda Salah')
+            }
+        </script>
+    </div>
+
+    <div id="percabanganswitch" class="example-content">
+        <script>
+            //percabangan switch
+            let sstring = 'blue'
+            switch(sstring){
+                case 'red':
+                    alert('I Love Red!')
+                    break;
+
+                case 'blue':
+                    alert('I Love Blue!')
+                    break;
+                default:
+                    alert('I dont know what color is!')
+                    break;
+            }
+        </script>
+    </div>
+
+    <div id="percabanganfor" class="example-content">
+        <script>
+            //perulangan for
+            for(let i = 1; i < 5; i++){
+                document.writeln(i)
+                document.writeln('<br>')
+            }
+        </script>
+    </div>
+
+    <div id="percabanganwhile" class="example-content">
+        <script>
+            //perulangan while
+            let k = 1
+            while (k<5){
+                document.writeln(k)
+                document.writeln('<br>')
+                k++
+            }
+        </script>
+    </div>
+
+    <div id="percabangandowhile" class="example-content">
+        <script>
+            //perulangan do..while
+            let l =1;
+            document.writeln('Perulangan do while')
+            document.writeln('<br>')
+            do{
+                document.writeln(l)
+                document.writeln('<br>')
+                l++
+            }while(l<5);
+        </script>
+    </div>
+
+    <div id="loopcontrolbreak" class="example-content">
+        <script>
+            //loop control break
+            document.writeln('Perulangan for')
+            document.writeln('<br>')
+            for(let m = 1; m < 5; m++){
+                if (m == 3){
+                    break
+                }
+                document.writeln(m)
+                document.writeln('<br>')
+            }
+        </script>
+    </div>
+
+    <div id="loopcontrol" class="example-content">
+        <script>
+            //loop control 
+            document.writeln('Perulangan for')
+            document.writeln('<br>')
+            for(let n = 1; n < 5; n++){
+                if(n == 3){
+                    continue
+                }
+                document.writeln(n)
+                document.writeln('<br>')
+            }
+        </script>
+    </div>
+</body>
+</html>
