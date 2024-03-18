@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM TUGAS 6</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1><center>FORM PENDAFTARAN PROGRAM</center></h1>
+    <h3>Nama<br>
+        <input type="text" id="nama" name="nama" placeholder="Nama lengkap">
+    </h3>
+    <h3>Email<br>
+        <input type="email" id="email" name="email" placeholder="Email aktif">
+    </h3>
+    <h3>No HP<br>
+        <input type="tel" id="hp" name="hp" placeholder="No HP aktif">
+    </h3>
+    <h3>Jenis Kelamin<br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Laki-laki</label><br>
+
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Perempuan</label>
+    </h3>
+    <h3>
+        <label for="prodi">Prodi</label><br>
+        <select id="prodi" name="prodi">
+        <option value="0">Pilih Prodi</option>
+        <option value="1">Sistem Informasi</option>
+        <option value="2">Teknik Informatika</option>
+        <option value="3">Teknik Industri</option>
+        <option value="4">Teknik Elektro</option>
+        <option value="5">Teknik Mekatro</option>
+        <option value="6">Teknik Mesin</option>
+        </select>
+    </h3>
+    <h3>
+        <label>Hobi</label><br>
+        <input type="checkbox" id="hobi1" name="hobi" value="Memasak">
+        <label for="hobi1">Membaca</label><br>
+
+        <input type="checkbox" id="hobi2" name="hobi" value="Olahraga">
+        <label for="hobi2">Menulis</label><br>
+
+        <input type="checkbox" id="hobi3" name="hobi" value="Membaca">
+        <label for="hobi3">Menyanyi</label><br>
+
+        <input type="checkbox" id="hobi4" name="hobi" value="Membaca">
+        <label for="hobi4">Olahraga</label><br>
+    </h3>
+    <h3>
+        <label for="alamat"><strong>Alamat</strong></label><br>
+        <textarea id="alamat" name="alamat" rows="4" cols="50" placeholder="Alamat Lengkap."></textarea>
+    </h3>
+    <h3>
+        <label for="file">Foto Diri</label><br>
+        <input type="file" id="file" name="file">
+    </h3><button type="submit" id="submitBtn">Daftar</button>
+
+    <script>
+        document.getElementById("submitBtn").addEventListener("click", function() {
+            var nama = document.getElementById("nama").value;
+            alert("Terima kasih sudah mendaftar " + nama);
+        });
+    </script>
+</body>
+</html>
